@@ -1,0 +1,32 @@
+.listClients {
+    border: 2px double black;
+    background: #fc3;
+    padding: 10px;
+    margin: 20px;
+    cursor:pointer;
+    min-width: 320px;
+    max-width: 320px;
+}
+.addClient {
+    border: 2px double black;
+    background: #fc3;
+    padding: 10px;
+    margin: 20px;
+    min-width: 320px;
+    max-width: 320px;
+}
+.successfullyAddClient {
+    border: 2px double black;
+    background: greenyellow;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+}
+.errorAddClient {
+    border: 2px double black;
+    background: lightcoral;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+}
+

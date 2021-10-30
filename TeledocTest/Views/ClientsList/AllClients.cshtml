@@ -1,0 +1,40 @@
+﻿@model TeledocTest.ViewModels.ClientsListViewModel
+
+@if (Model.Info.IsTryToAdd == true)
+{
+    if (Model.Info.ClientAdd==true)
+    {
+        <div id="popUp" class="successfullyAddClient"><h4>Клиент добавлен: @Model.Info.AddInfo </h4></div>
+    }
+    else
+    {
+        <div id="popUp" class="errorAddClient"><h4>Ошибка в добавлении: @Model.Info.AddInfo </h4></div>
+    }
+}
+
+@{
+    Client addClient = new Client();
+}
+<div class="row mt-5 mb-2">
+    @Html.Partial("AddClient", addClient )
+    @{
+        @if(Model.Clients.Any())
+        {
+            foreach (var client in Model.Clients)
+            {
+                @Html.Partial("ClientObject", client);
+            }
+        }
+    }
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    $( "#popUp" ).show(); 
+       setTimeout(function() {
+          $( "#popUp" ).hide();
+        }, 3000);
+  });
+
+</script>

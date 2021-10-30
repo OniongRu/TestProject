@@ -1,0 +1,27 @@
+﻿@model Client
+<div class="col-lg-4, addClient" >
+    <form asp-action="Create" method="post" class="form-horizontal" >
+        <div class="form-group">
+            <label asp-for=@Model.Name></label>
+            <div>
+                <input asp-for=@Model.Name class="form-control"/>
+                <span asp-validation-for=@Model.Name class="text-danger"></span>
+            </div> 
+        </div>
+        <div class="form-group">
+            <label asp-for=@Model.TIN></label>
+            <div>
+                <input asp-for=@Model.TIN class="form-control"/>
+                <span asp-validation-for=@Model.TIN class="text-danger"></span>
+            </div> 
+        </div>
+        <div class="form-group">
+                    <label asp-for=@Model.Type></label>
+                    <div>
+                        <input asp-for=@Model.Type class="form-control"/>
+                        <span asp-validation-for=@Model.Type class="text-danger"></span>
+                    </div> 
+                </div>
+        <input class="btn btn-success" type="submit" value="Добавить клиента"/>
+    </form>
+</div>

@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5400;Database=teledocDB;Username=postgres;Password=docker;"
+  }
+}
